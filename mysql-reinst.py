@@ -38,7 +38,7 @@ def insert_random_dates(c, data):
 def main():
     data = load_config()
     c = Connection(host=data['remote_host'], user=data['remote_user'], connect_kwargs={"password": data['remote_password']})
-    #install_mysql(c, data)
+    install_mysql(c, data)
     create_db_user(c, data)
     insert_random_dates(c, data)
 
